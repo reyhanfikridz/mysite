@@ -1,3 +1,9 @@
+"""
+Import:
+1. Built-in Python library
+2. Django library
+3. Models
+"""
 import datetime
 
 from django.test import TestCase
@@ -8,7 +14,9 @@ from .models import Question
 
 
 class QuestionModelTests(TestCase):
-
+    """
+    Class untuk testing fungsi was_published_recently pada model Question
+    """
     def test_was_published_recently_with_future_question(self):
         """
         was_published_recently() returns False for questions whose pub_date
@@ -48,6 +56,9 @@ def create_question(question_text, days):
 
 
 class QuestionIndexViewTests(TestCase):
+    """
+    Class untuk testing pertanyaan pada index view
+    """
     def test_no_questions(self):
         """
         If no questions exist, an appropriate message is displayed.
@@ -106,6 +117,9 @@ class QuestionIndexViewTests(TestCase):
 
 
 class QuestionDetailViewTests(TestCase):
+    """
+    Class untuk testing pertanyaan pada detail view
+    """
     def test_future_question(self):
         """
         The detail view of a question with a pub_date in the future

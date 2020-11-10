@@ -1,3 +1,8 @@
+"""
+Import:
+1. Django library
+2. Views
+"""
 from django.urls import path
 
 from . import views
